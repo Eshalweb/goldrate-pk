@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gold Rate Today 26 Oct 2026 Original Rs.423,436 | Punjab Pakistan Live</title>
 <style>
 :root{--gold:#b8960c;--gold2:#d4a90a;--bg:#fefcf3;--card:#fff;--border:#f0e6c0;--text:#1a1608;--muted:#8a7d4a}
@@ -9,7 +11,8 @@
 .logo{font-weight:800;color:var(--gold);display:flex;gap:8px;align-items:center}.live-badge{border:1px solid rgba(184,150,12,0.3);background:#fdf6d8;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:700;color:var(--gold)}
 .hero{max-width:1300px;margin:0 auto;padding:40px 28px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:32px}@media(max-width:900px){.hero{grid-template-columns:1fr}}
 .hero h1{font-size:40px;font-weight:800;line-height:1.1}.hero h1 span{color:var(--gold)}.hero p{color:var(--muted);margin:14px 0;font-size:14px}
-.gold-card{background:linear-gradient(145deg,#fff,#fdf6d8);border:1px solid var(--border);border-radius:20px;padding:16px;box-shadow:0 24px 60px rgba(184,150,12,0.18);transform:rotateY(-10deg) rotateX(5deg)}.gold-card img{width:100%;height:300px;object-fit:cover;border-radius:14px}
+.gold-card{background:linear-gradient(145deg,#fff,#fdf6d8);border:1px solid var(--border);border-radius:20px;padding:16px;box-shadow:0 24px 60px rgba(184,150,12,0.18)}
+.gold-card img{width:100%;height:320px;object-fit:cover;border-radius:14px;display:block}
 .section{max-width:1300px;margin:0 auto;padding:28px}
 .rates-wrap{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:0 16px 40px rgba(184,150,12,0.12)}
 .rates-head{background:#1a1608;color:#fdf6d8;padding:14px 18px;display:flex;justify-content:space-between;font-weight:700}
@@ -18,60 +21,105 @@
 .punjab-box{margin-top:20px;background:linear-gradient(135deg,#fff,#fdf6d8);border:2px solid var(--gold);border-radius:18px;padding:20px}
 .punjab-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}@media(max-width:700px){.punjab-grid{grid-template-columns:repeat(2,1fr)}}
 .p-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center}.p-card b{color:var(--gold);display:block}
-.calc{max-width:700px;margin:30px auto;background:#fff;border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:0 24px 60px rgba(184,150,12,0.15)}
-.calc input,.calc select{width:100%;padding:12px;border:1.5px solid var(--border);border-radius:10px;margin-top:6px;font-weight:600}
-.btn{width:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border:none;padding:14px;border-radius:12px;font-weight:800;margin-top:14px;cursor:pointer}
-.result{margin-top:16px;background:#1a1608;color:#fdf6d8;border-radius:14px;padding:16px;text-align:center}.result b{font-size:28px;color:var(--gold);display:block}
+.calc{max-width:700px;margin:30px auto;background:#fff;border:2px solid var(--border);border-radius:20px;padding:24px;box-shadow:0 24px 60px rgba(184,150,12,0.15)}
+.calc input,.calc select{width:100%;padding:14px;border:2px solid var(--border);border-radius:12px;margin-top:6px;font-weight:600;font-size:15px}
+.quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.quick button{padding:8px 14px;border:1px solid var(--border);background:#fff;border-radius:20px;font-size:12px;font-weight:700;cursor:pointer}
+.quick button.active{background:var(--gold);color:#fff;border-color:var(--gold)}
+.btn{width:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border:none;padding:16px;border-radius:14px;font-weight:900;margin-top:16px;cursor:pointer;font-size:16px}
+.result{margin-top:18px;background:#1a1608;color:#fdf6d8;border-radius:16px;padding:18px;text-align:center}.result b{font-size:32px;color:var(--gold2);display:block}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}@media(max-width:700px){.gallery{grid-template-columns:1fr}}
-.g-card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden}.g-card img{width:100%;height:200px;object-fit:cover}.g-card div{padding:8px;font-size:12px;font-weight:600;text-align:center}
+.g-card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden}.g-card img{width:100%;height:260px;object-fit:cover;display:block}.g-card div{padding:10px;font-size:13px;font-weight:700;text-align:center}
 .footer{background:#1a1608;color:#c9b87a;text-align:center;padding:24px;font-size:11px;margin-top:30px}
 </style>
 </head>
 <body>
-<div class="header"><div class="logo">● GOLD RATE PAKISTAN</div><div class="live-badge">LIVE 26 OCT 2026 - Rs.423,436</div></div>
+<div class="header"><div class="logo">● GOLD RATE PAKISTAN</div><div class="live-badge" id="liveTime">LIVE 26 OCT 2026 - Rs.423,436</div></div>
+
 <div class="hero">
 <div><h1>Gold Rate Today in<br><span>Punjab & Pakistan</span><br>Rs. 423,436 Per Tola</h1><p>Original rate APGJSA se. Karachi Lahore Islamabad Peshawar Quetta Faisalabad Multan Gujranwala Sialkot. 24K Rs.423,436 | 22K Rs.388,150 | 21K Rs.370,506</p>
-<div style="display:flex;gap:8px;flex-wrap:wrap"><span style="border:1px solid #f0e6c0;background:#fff;padding:6px 12px;border-radius:10px;font-size:11px;font-weight:600">✓ 24K Rs.423,436</span><span style="border:1px solid #f0e6c0;background:#fff;padding:6px 12px;border-radius:10px;font-size:11px;font-weight:600">✓ 22K Rs.388,150</span><span style="border:1px solid #f0e6c0;background:#fff;padding:6px 12px;border-radius:10px;font-size:11px;font-weight:600">✓ ORIGINAL RATE</span></div></div>
-<div><div class="gold-card"><div style="display:flex;justify-content:space-between;font-size:10px;font-weight:700;color:var(--gold);margin-bottom:8px"><span>TURKISH 22K - ORIGINAL</span><span>LIVE</span></div><img src="./IMG-20261026-WA1339.jpg" alt="22K Turkish Gold"><div style="margin-top:10px;display:flex;justify-content:space-between"><div><div style="font-size:10px;color:#8a7d4a">24K ORIGINAL</div><div style="font-weight:800;color:#b8960c">Rs.423,436</div></div><div style="text-align:right"><div style="font-size:10px;color:#8a7d4a">22K ORIGINAL</div><div style="font-weight:700">Rs.388,150</div></div></div></div></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><span style="border:1px solid #f0e6c0;background:#fff;padding:8px 14px;border-radius:12px;font-size:12px;font-weight:700">✓ 24K Rs.423,436</span><span style="border:1px solid #f0e6c0;background:#fff;padding:8px 14px;border-radius:12px;font-size:12px;font-weight:700">✓ 22K Rs.388,150</span><span style="border:1px solid #f0e6c0;background:#fff;padding:8px 14px;border-radius:12px;font-size:12px;font-weight:700">✓ ORIGINAL RATE</span></div></div>
+<div><div class="gold-card"><div style="display:flex;justify-content:space-between;font-size:11px;font-weight:800;color:var(--gold);margin-bottom:10px"><span>22K ORIGINAL - LIVE</span><span id="nowTime">26 OCT 09:30 AM</span></div><img src="./IMG-20261026-WA1339.jpg" alt="Heart Pendant"><div style="margin-top:12px;display:flex;justify-content:space-between"><div><div style="font-size:11px;color:#8a7d4a">24K ORIGINAL</div><div style="font-weight:900;color:#b8960c;font-size:18px">Rs.423,436</div></div><div style="text-align:right"><div style="font-size:11px;color:#8a7d4a">22K ORIGINAL</div><div style="font-weight:800;font-size:16px">Rs.388,150</div></div></div></div></div>
 </div>
+
 <div class="section">
 <div class="rates-wrap"><div class="rates-head"><span>ALL PAKISTAN ORIGINAL 24K - 26 OCT 2026</span><span>Rs.423,436/tola</span></div><div class="rates-grid">
 <div class="rate"><span>Karachi - Sindh</span><b>Rs.423,436</b></div><div class="rate"><span>Lahore - Punjab</span><b>Rs.423,436</b></div><div class="rate"><span>Islamabad</span><b>Rs.423,736</b></div><div class="rate"><span>Peshawar - KPK</span><b>Rs.423,136</b></div><div class="rate"><span>Quetta</span><b>Rs.422,736</b></div><div class="rate"><span>Multan</span><b>Rs.423,236</b></div><div class="rate"><span>Faisalabad</span><b>Rs.423,336</b></div><div class="rate"><span>Rawalpindi</span><b>Rs.423,636</b></div>
 </div></div>
-<div class="punjab-box"><b>Punjab Cities - Original Rates Today</b><div style="font-size:11px;color:#8a7d4a">24K Rs.423,436 Standard - Lahore base</div><div class="punjab-grid">
+
+<div class="punjab-box"><b>Punjab Cities - Original Rates Today</b><div style="font-size:12px;color:#8a7d4a">24K Rs.423,436 Standard - Lahore base</div><div class="punjab-grid">
 <div class="p-card">LAHORE<b>Rs.423,436</b></div><div class="p-card">FAISALABAD<b>Rs.423,336</b></div><div class="p-card">GUJRANWALA<b>Rs.423,286</b></div><div class="p-card">SIALKOT<b>Rs.423,286</b></div><div class="p-card">MULTAN<b>Rs.423,236</b></div><div class="p-card">RAWALPINDI<b>Rs.423,636</b></div><div class="p-card">BAHAWALPUR<b>Rs.423,186</b></div><div class="p-card">SARGODHA<b>Rs.423,236</b></div>
 </div></div>
-<div class="calc"><div style="text-align:center;font-weight:800;font-size:18px">Gold Calculator - Original Rate 26 Oct 2026</div><p style="text-align:center;font-size:11px;color:#8a7d4a;margin-top:4px">Carat select karo - original price auto show hoga</p>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px"><div><label style="font-size:11px;font-weight:600">KARAT - ORIGINAL RATE</label><select id="karat"><option value="423436" selected>24K - Rs.423,436/tola Original</option><option value="388150">22K - Rs.388,150/tola Turkish</option><option value="370506">21K - Rs.370,506/tola Light</option><option value="317577">18K - Rs.317,577/tola Diamond</option></select></div><div><label style="font-size:11px;font-weight:600">CITY</label><select id="city"><option>Lahore</option><option>Karachi</option><option>Islamabad</option><option>Faisalabad</option><option>Multan</option><option>Peshawar</option><option>Quetta</option></select></div></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px"><div><label style="font-size:11px;font-weight:600">WEIGHT</label><input type="number" id="weight" value="1" step="0.1"></div><div><label style="font-size:11px;font-weight:600">UNIT</label><select id="unit"><option value="1" selected>Tola</option><option value="0.857">10 Gram</option><option value="0.0857">1 Gram</option><option value="0.1">Masha</option></select></div></div>
-<div style="margin-top:12px"><label style="font-size:11px;font-weight:600">MAKING %</label><input type="number" id="making" value="15"></div>
+
+<div class="calc">
+<div style="text-align:center;font-weight:900;font-size:20px">Gold Calculator - Live Original Rate</div>
+<p style="text-align:center;font-size:12px;color:#8a7d4a;margin-top:4px">Jo bhi weight likho, usi time price nikal jayega</p>
+
+<div style="margin-top:8px;font-size:11px;font-weight:700">QUICK SELECT:</div>
+<div class="quick">
+<button onclick="setWeight(1,0.0857,this)">1 Gram</button>
+<button onclick="setWeight(10,0.0857,this)">10 Gram</button>
+<button onclick="setWeight(1,1,this)" class="active">1 Tola</button>
+<button onclick="setWeight(2,1,this)">2 Tola</button>
+<button onclick="setWeight(4,1,this)">4 Tola</button>
+<button onclick="setWeight(5,1,this)">5 Tola</button>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px"><div><label style="font-size:12px;font-weight:700">KARAT - ORIGINAL RATE</label><select id="karat"><option value="423436" selected>24K - Rs.423,436/tola</option><option value="388150">22K - Rs.388,150/tola</option><option value="370506">21K - Rs.370,506/tola</option><option value="317577">18K - Rs.317,577/tola</option></select></div><div><label style="font-size:12px;font-weight:700">CITY</label><select id="city"><option>Lahore</option><option>Karachi</option><option>Islamabad</option><option>Faisalabad</option><option>Multan</option><option>Peshawar</option><option>Quetta</option></select></div></div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px"><div><label style="font-size:12px;font-weight:700">WEIGHT</label><input type="number" id="weight" value="1" step="0.1"></div><div><label style="font-size:12px;font-weight:700">UNIT</label><select id="unit"><option value="1" selected>Tola (11.66g)</option><option value="0.857">10 Gram (0.857 Tola)</option><option value="0.0857">1 Gram (0.0857 Tola)</option><option value="0.08333">1 Masha</option></select></div></div>
+
+<div style="margin-top:12px"><label style="font-size:12px;font-weight:700">MAKING %</label><input type="number" id="making" value="15"></div>
+
 <button class="btn" onclick="calc()">CALCULATE ORIGINAL PRICE</button>
-<div class="result"><span style="font-size:10px;opacity:0.7">TOTAL PAYABLE - ORIGINAL</span><b id="final">Rs.486,951</b><span id="brk" style="font-size:11px;opacity:0.8">Gold Rs.423,436 + Making 15% • 26 Oct 2026 Original</span></div></div>
+
+<div class="result"><span style="font-size:11px;opacity:0.7">TOTAL PAYABLE - ORIGINAL</span><b id="final">Rs.486,951</b><span id="brk" style="font-size:12px;opacity:0.9;display:block;margin-top:8px;line-height:1.5">Gold Rs.423,436 + Making 15% • Weight: 1.000 Tola • Original 26 Oct 2026</span></div>
+</div>
+
 <div style="margin-top:28px"><b>Trending Jewelry Gallery - Your Uploaded Images</b><div class="gallery">
-<div class="g-card"><img src="./IMG-20261026-WA1339.jpg" alt="Heart"><div>Heart Pendant - 22K Original Rs.388,150</div></div>
+<div class="g-card"><img src="./IMG-20261026-WA1339.jpg" alt="Heart"><div>Heart Pendant - 22K Original</div></div>
 <div class="g-card"><img src="./IMG-20261026-WA0521.jpg" alt="Turkish"><div>Turkish Set - 22K Rs.388,150</div></div>
 <div class="g-card"><img src="./IMG-20261026-WA7134.jpg" alt="Gold Bars"><div>Gold Bars - 24K Original Rs.423,436</div></div>
 </div></div>
 </div>
-<div class="footer">GOLD RATE PAKISTAN © 2026 • ORIGINAL 26 OCT 2026 • 24K Rs.423,436 | 22K Rs.388,150 | 21K Rs.370,506 | 18K Rs.317,577 | 10G Rs.363,028 | 1G Rs.36,303<br>Source: APGJSA • Fixed Light Theme • Carat Wise Original Price • AdSense Ready</div>
+
+<div class="footer">GOLD RATE PAKISTAN © 2026 • ORIGINAL 26 OCT 2026 • 24K Rs.423,436 | 22K Rs.388,150 | 21K Rs.370,506 | 18K Rs.317,577 | 10G Rs.363,028 | 1G Rs.36,303<br>Source: APGJSA • Live Calculator • Carat Wise Original Price</div>
+
 <script>
-function calc(){
-let k=parseFloat(document.getElementById('karat').value);
-let w=parseFloat(document.getElementById('weight').value);
-let u=parseFloat(document.getElementById('unit').value);
-let m=parseFloat(document.getElementById('making').value);
-let t=w*u;
-let g=k*t;
-let mk=g*m/100;
-let f=g+mk;
-document.getElementById('final').innerText='Rs.'+Math.round(f).toLocaleString('en-PK');
-document.getElementById('brk').innerText='Gold: Rs.'+Math.round(g).toLocaleString('en-PK')+' + Making '+m+'% (Rs.'+Math.round(mk).toLocaleString('en-PK')+') • Weight: '+t.toFixed(3)+' Tola • Original Rate 26 Oct 2026';
+function setWeight(w, unitVal, btn){
+  document.getElementById('weight').value = w;
+  document.getElementById('unit').value = unitVal;
+  document.querySelectorAll('.quick button').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  calc();
 }
+
+function calc(){
+  let k = parseFloat(document.getElementById('karat').value) || 423436;
+  let w = parseFloat(document.getElementById('weight').value) || 0;
+  let u = parseFloat(document.getElementById('unit').value) || 1;
+  let m = parseFloat(document.getElementById('making').value) || 0;
+  
+  let t = w * u; // total in tola
+  let g = k * t; // gold price
+  let mk = g * m / 100;
+  let f = g + mk;
+
+  document.getElementById('final').innerText = 'Rs.' + Math.round(f).toLocaleString('en-PK');
+  document.getElementById('brk').innerHTML = 'Gold: Rs.'+ Math.round(g).toLocaleString('en-PK') +' + Making '+ m +'% (Rs.'+ Math.round(mk).toLocaleString('en-PK') +')<br>Weight: '+ t.toFixed(4) +' Tola ('+ (t*11.664).toFixed(2) +' Gram) • Rate: Rs.'+ k.toLocaleString('en-PK') +'/tola • <span id="liveBrk">26 Oct 2026 '+ new Date().toLocaleTimeString() +'</span>';
+
+  // update live time
+  let now = new Date();
+  document.getElementById('nowTime').innerText = now.toLocaleDateString('en-GB', {day:'2-digit', month:'short'}) + ' ' + now.toLocaleTimeString();
+}
+
+document.getElementById('karat').addEventListener('input', calc);
+document.getElementById('karat').addEventListener('change', calc);
+document.getElementById('weight').addEventListener('input', calc);
+document.getElementById('unit').addEventListener('change', calc);
+document.getElementById('making').addEventListener('input', calc);
+
 calc();
-document.getElementById('karat').addEventListener('change',calc);
-document.getElementById('weight').addEventListener('input',calc);
-document.getElementById('unit').addEventListener('change',calc);
-document.getElementById('making').addEventListener('input',calc);
+setInterval(calc, 60000);
 </script>
 </body>
-</html>
+                                                                                                                                                          </html>
